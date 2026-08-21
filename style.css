@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*the import url above is so that I have access to Roboto fonts and weights - retreived from googling Roboto fonts and then copy/paste the import section*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /*sets default font to Roboto and sans-serif as the backup font if someone elses browser doesnt or cant download Roboto*/
+}
+
+#personal-logo {
+  height: 100px;
+  width: 120px;
+  filter: invert(1); /*inverts the colors of the image*/
+}
