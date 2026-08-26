@@ -6,8 +6,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; /*sets default font to Roboto and sans-serif as the backup font if someone elses browser doesnt or cant download Roboto*/
 }
-
-
+html {
+  scroll-behavior: smooth;
+}
 li {
   list-style-type: none;
 }
@@ -108,14 +109,14 @@ nav,
 .header {
   opacity: 1;
   visibility: visible;
-  transition: all 600ms 800ms;
+  transition: all 400ms 200ms;
 }
 .modal--open nav,
 .modal--open .scroll,
 .modal--open .header {
   opacity: 0;
   visibility: hidden;
-  transition: all 400ms;
+  transition: all 600ms;
 }
 .dark-theme .title,
 .dark-theme .section__title,
@@ -173,9 +174,11 @@ LANDING PAGE
   border: none;
   background-color: #242424;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 32px;
   right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 2);
 }
 .scroll {
   position: absolute;/*the position being absolute has nothing to do with anything else being absolute. It is there so that it doesnt desterb the positioning of anything else. Nothing gets pushed to fit this thing in. */
@@ -276,7 +279,6 @@ nav {
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  /* box-shadow: 0px 20px 80px 0px rgb(0, 0, 0, 0.55); */
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -309,7 +311,7 @@ nav {
 .modal__contact{
   background-color: #242424;
   color: white;
-  transform: translateX(0%);
+  transform: translateX(110%);
 }
 .modal__languages {
   display: flex;
@@ -494,6 +496,7 @@ margin-top: 8px;
 
 */
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0%;
@@ -561,4 +564,55 @@ footer {
 .shape--8 {
   top: 80vh;
   left: 80vw;
+}
+
+@media (max-width: 768px) {
+  .title {
+    fong-size: 80px; 
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0%;
+  }
+  .modal__half {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  } 
+  .header__para {
+    font-size: 18px;
+  }
+  .nav__link:first-child {
+    display: none;
+  }
+  .project__description--para {
+    display: none;
+  }
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 40px;
+  }
+  /* .container {
+    padding: 8px 0;
+  } */
 }
