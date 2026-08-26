@@ -124,14 +124,11 @@ nav,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-adjust,
 .dark-theme .header__para {
-  color: white;
+  color: rgb(171, 173, 170);
 
 }
 .dark-theme section {
   background-color: #242424;
-}
-.dark-theme #logo {
-  filter: invert;
 }
 .dark-theme .scroll__icon {
   border-color: white;
@@ -141,7 +138,7 @@ nav,
   background-color: white;
 }
 .dark-theme .mail__btn {
-  background-color: white;
+  background-color: rgb(171, 173, 170);
   color: #242424;
 }
 /* 
@@ -178,7 +175,7 @@ LANDING PAGE
   bottom: 32px;
   right: 40px;
   z-index: 100;
-  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 2);
+  box-shadow: 0 12px 30px 0 rgb(58, 235, 52);
 }
 .scroll {
   position: absolute;/*the position being absolute has nothing to do with anything else being absolute. It is there so that it doesnt desterb the positioning of anything else. Nothing gets pushed to fit this thing in. */
@@ -230,9 +227,8 @@ nav {
 }
 #personal-logo {
   height: 100px;
-  width: 120px;
-  /* filter: invert(1); inverts the colors of the image */
-  border-radius: 50px 10%;
+  border-radius: 50%;
+  box-shadow: 0 6px 30px 0 rgb(58, 235, 52)
 }
 .nav__link--list {
   display: flex;
@@ -499,7 +495,6 @@ footer {
   position: relative;
   background-color: #242424;
   display: flex;
-  padding: 6% 0%;
 }
 .footer__row {
   display: flex;
@@ -507,7 +502,9 @@ footer {
   align-items: center;
 }
 .footer__logo--img {
-  width: 90px; 
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 6px 30px 0 rgb(58, 235, 52)
 }
 .footer__social--list {
   width: 100%;
