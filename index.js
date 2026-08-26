@@ -1,6 +1,31 @@
 //Template ID: template_jb9i0pl
 //Service ID: service_77ywktl
 //Public Key: rnMxH2Mh02Rt-ZWWG
+let isModalOpen  = false;
+let contrastToggle = false;
+const scaleFactor = 1/20;
+
+function moveBackground(event) {
+  const shapes = document.querySelector(".shape");
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
+
+  for (let i = 0; i < shapes.length; ++i) {
+    const isOdd = i % 2 !==0;
+    const boolInt= isOdd ? -1 : 1;
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`;
+  }
+}
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+  document.body.classList += " dark-theme";
+  }
+  else {
+    document.body.classList.remove("dark-theme")
+  }
+}
 
 function contact() {
   event.preventDefault();
@@ -21,13 +46,10 @@ function contact() {
     alert("The email service is temporarily unavailable. Please contact me directly at JoshDLWhite@gmail.com");
   })
 }
-
-let isModalOpen = false;
 function toggleModal() {
   if (isModalOpen) {
     isModalOpen = false;
-    return document.body.classList.remove("modal--open");
-    
+    return document.body.classList.remove("modal--open");    
   }
   isModalOpen = true;
   document.body.classList += " modal--open";
